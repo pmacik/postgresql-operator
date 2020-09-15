@@ -32,7 +32,7 @@ const (
 	//DBPortKey is the config map key for DB port
 	DBPortKey = "db.port"
 	//DBUsernameKey is the config map key for DB username
-	DBUsernameKey = "db.username"
+	DBUsernameKey = "db.user"
 	//DBPasswordKey is the config map key for DB password
 	DBPasswordKey = "db.password"
 	//DBNameKey is the config map key for DB name
