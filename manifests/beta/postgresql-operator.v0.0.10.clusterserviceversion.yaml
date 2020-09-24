@@ -140,44 +140,44 @@ spec:
           - description: PostgreSQL database image
             displayName: PostgreSQL database image
             path: image
+            x-descriptors:
+              - service.binding
           - description: PostgreSQL database image name
             displayName: PostgreSQL database image name
             path: imageName
+            x-descriptors:
+              - service.binding
           - description: Desired database name. If not provided, default value 'postgres' will be used.
             displayName: DB name
             path: dbName
             x-descriptors:
-              - binding:env:attribute
+              - service.binding
         statusDescriptors:
           - description: Name of the Secret to hold the DB user and password
             displayName: DB Password Credentials
             path: dbCredentials
             x-descriptors:
               - urn:alm:descriptor:io.kubernetes:Secret
-              - binding:env:object:secret:user
-              - binding:env:object:secret:password
+              - service.binding:user:sourceKey=user
+              - service.binding:user:sourceKey=password
           - description: Database connection IP address
             displayName: DB IP address
             path: dbConnectionIP
             x-descriptors:
-              - binding:env:attribute
+              - service.binding
           - description: Database connection port
             displayName: DB port
             path: dbConnectionPort
             x-descriptors:
-              - binding:env:attribute
+              - service.binding
           - description: Database name
             displayName: DB name
             path: dbName
             x-descriptors:
-              - binding:env:attribute
+              - service.binding
           - description: Name of the ConfigMap to hold the DB config
             displayName: DB Config Map
             path: dbConfigMap
             x-descriptors:
               - urn:alm:descriptor:io.kubernetes:ConfigMap
-              - binding:env:object:configmap:db.host
-              - binding:env:object:configmap:db.port
-              - binding:env:object:configmap:db.name
-              - binding:env:object:configmap:db.user
-              - binding:env:object:configmap:db.password
+              - service.binding
