@@ -158,8 +158,8 @@ spec:
             path: dbCredentials
             x-descriptors:
               - urn:alm:descriptor:io.kubernetes:Secret
-              - service.binding:user:sourceKey=user
-              - service.binding:user:sourceKey=password
+              - service.binding:user:sourceValue=user
+              - service.binding:password:sourceValue=password
           - description: Database connection IP address
             displayName: DB IP address
             path: dbConnectionIP
